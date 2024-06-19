@@ -1,0 +1,73 @@
+%YAML:1.0
+#--------------------------------------------------------------------------------------------
+# System config
+#--------------------------------------------------------------------------------------------
+
+# When the variables are commented, the system doesn't load a previous session or not store the current one
+
+# If the LoadFile doesn't exist, the system give a message and create a new Atlas from scratch
+#System.LoadAtlasFromFile: "Session_MH01_MH02_MH03_Mono"
+
+# The store file is created from the current session, if a file with the same name exists it is deleted
+#System.SaveAtlasToFile: "Session_MH01_MH02_MH03_Mono"
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+# --------------------------------------------------------------------------------------------
+# File.version: "1.0"
+
+# Camera.type: "PinHole"
+
+# # Camera calibration and distortion parameters (OpenCV) 
+# Camera1.fx: 671.116259
+# Camera1.fy: 671.116259
+# Camera1.cx: 320.000000
+# Camera1.cy: 240.000000
+
+# Camera1.k1: 0.206446
+# Camera1.k2: -0.679159
+# Camera1.p1: -0.005183
+# Camera1.p2: -0.001148
+
+# Camera.width: 640
+# Camera.height: 480
+
+# # Camera frames per second 
+# Camera.fps: 20
+
+# # Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+# Camera.RGB: 0
+
+
+#########################
+### Camera Parameters ###
+#########################
+
+fx: 671.116259
+fy: 671.116259
+cx: 320.000000
+cy: 240.000000 
+
+height: 1
+pitch_angle: 0
+
+#########################
+### ARM-VO Parameters ###
+#########################
+
+# Number of FAST features per image
+nFeatures: 300
+
+#Kepoints with corner response lower than threshold are ignored (lower it if your images have low contrast)
+threshold: 10
+
+# Image is divided to a nRows * nCols grid
+nRows: 6
+nCols: 12
+
+
+##########################
+### Tracker Parameters ###
+##########################
+
+window_size: 13
